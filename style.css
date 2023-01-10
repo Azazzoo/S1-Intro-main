@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    display: flex;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+.navbar-brand{
+    font-size: 1.25rem;
+}
+.nav{
+    padding: .75rem;
+}
+.nav-link{
+    justify-content: center;
+}
+.nav-link{
+
+}
