@@ -75,26 +75,26 @@ h4 {
     padding-top: .25rem;
     font-size: 1.25rem;
 }
-button {
+input {
     border: 1px solid grey;
     font-size: 1.25rem;
     font-weight: 200;
     background-color: white;
     border-radius: 5px;
 }
-button:hover, button:active {
+.button:hover, .button:active {
     background-color: green;
     color: white;
     border-radius: 5px;
 }
-.d-grid button{
+.d-grid input{
     padding: 0.5rem 0;
     width: 37.5rem;
 }
 .f-grid{
     text-align: end;
 }
-.f-grid button{
+.f-grid input{
     padding: 0.5rem;
 }
 .main input{

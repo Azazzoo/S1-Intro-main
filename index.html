@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
-  <body>
-
+  <body class="container">
+  <form action="" method="post">
     <div>
         <p class="item1">
           <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
@@ -29,16 +29,16 @@
           <h4 class="mb-3">Ajouter un item à la liste</h4>
           <div class="mb-3">
             <p>Description :</p>
-            <input type="text" id="desc" name="essai" required></input>
+            <input type="text" id="desc" ></input>
           </div>
           <div class="mb-4">
             Valeur estimée ($) :<br>
             <input type="number" id="valeur">
           </div>
           <div class="d-grid gap-2">
-            <button onclick="ajouter()">Ajouter</button>
+            <input type="button" value="Ajouter" class="button" onclick="ajouter()"></input>
             <br>
-            <button>Annuler</button>
+            <input type="reset" value="Annuler" class="button"></input>
           </div>
       </div>
       <div class="liste">
@@ -54,13 +54,18 @@
         </div>
         <div class="flex">
           <p class="col-form-label h3">Destinataire:</p>
-          <input id="email" type="text">
+          <input id="email" onblur="ajouterEmail()">
         </div>
-          <div class="f-grid">
-            <button class="vert">Confirmer et envoyer</button>
-            <button>Recommencer</button>
+          <div class="f-grid flex" >
+            <input class="vert" type="submit" value="Confirmer et envoyer"></input>
+            <input onclick="effacer()" type="submit" value="Recommencer"></input>
           </div>
+
+          <input hidden name="Item1" value="Crocs des fetes">
+          <input hidden name="Item2" value="Une tuque des fetes">
+          <input hidden name="Item3" value="Un chandail laid des fetes">
       </div>
     </div>
+  </form>
   </body>
 </html>

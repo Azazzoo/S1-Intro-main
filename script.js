@@ -1,3 +1,4 @@
+compteur = 4;
 function ajouter(){
     let item = document.getElementById("desc").value;
     // Creer une balise p
@@ -16,12 +17,27 @@ function ajouter(){
     // mettre a jour le total
     let AncienPrix = document.getElementById("total").innerText;
     let nouveauPrix = parseInt(AncienPrix) + parseInt(prix);
-    document.getElementById("total").innerText = nouveauPrix;
+    document.getElementById("total").innerText = nouveauPrix + ("$");
+
+    // Creer des nouveaux input hidden dans le formulaire pour envoyer par courriel
+    nouveauInput = document.createElement("input");
+    nouveauInput.setAttribute("hidden", true);
+    nouveauInput.setAttribute("name", name + compteur);
+    nouveauInput.setAttribute("value",item);
+    document.forms[0].append(nouveauInput);
+    compteur++;
 
 
 }
 
+function ajouterEmail(){
+    let email = document.getElementById("email").value
+    document.forms[0].action = "mailto:"+email;
+}
 
-console.log("Bonjour");
+function effacer(){
+    document[0].action = "";
+}
+
 
 
